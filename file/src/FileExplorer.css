@@ -1,0 +1,75 @@
+ .file-explorer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    color: #e1e1e1; 
+    background-color: #1e1e1e; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .explorer-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; 
+    border: 1px solid #333;
+  }
+  
+  .file-tree {
+    width: 30%;
+    border-right: 1px solid #333;
+    padding: 10px;
+    background-color: #252526; 
+  }
+  
+  .file-tree ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .file-tree li {
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
+  .file-actions {
+    width: 70%;
+    padding: 10px;
+    background-color: #1e1e1e; 
+  }
+  
+  .file-actions table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .file-actions th,
+  .file-actions td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  
+  .file-actions th {
+    background-color: #3c3c3c;
+    color: #e1e1e1;
+  }
+  
+  .file-actions td {
+    color: #e1e1e1;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px; 
+  }
+  
+  .file-form {
+    margin-bottom: 20px;
+  }
+  
+  .selected-file-actions {
+    margin-top: 20px;
+  }
+  
+  
