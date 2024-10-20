@@ -78,7 +78,7 @@ app.delete('/api/files/:id', async (req, res) => {
 });
 
 
-const port = 5005;
+const port = 5006;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

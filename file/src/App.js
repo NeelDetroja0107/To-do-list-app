@@ -17,7 +17,7 @@ const FileExplorer = () => {
 
   const fetchFiles = async () => {
     try {
-      const res = await axios.get('http://localhost:5005/api/files');
+      const res = await axios.get('http://localhost:5006/api/files');
       setFiles(res.data);
     } catch (err) {
       setError('Failed to fetch files');
@@ -28,7 +28,7 @@ const FileExplorer = () => {
     e.preventDefault();
     setError('');
     try {
-      await axios.post('http://localhost:5005/api/files', { name, type, parent });
+      await axios.post('http://localhost:5006/api/files', { name, type, parent });
       fetchFiles();
       setName('');
       setType('file');
@@ -42,7 +42,7 @@ const FileExplorer = () => {
     if (!selectedFile) return;
     setError('');
     try {
-      await axios.put(`http://localhost:5005/api/files/${selectedFile._id}`, { name });
+      await axios.put(`http://localhost:5006/api/files/${selectedFile._id}`, { name });
       fetchFiles();
       setSelectedFile(null);
       setName('');
@@ -55,7 +55,7 @@ const FileExplorer = () => {
     if (!selectedFile) return;
     setError('');
     try {
-      await axios.delete(`http://localhost:5005/api/files/${selectedFile._id}`);
+      await axios.delete(`http://localhost:5006/api/files/${selectedFile._id}`);
       fetchFiles();
       setSelectedFile(null);
     } catch (err) {
@@ -82,7 +82,7 @@ const FileExplorer = () => {
 
   return (
     <div className="file-explorer">
-      <h1>File Explorer</h1>
+      <h1>To-do-list</h1>
       {error && <p className="error-message">{error}</p>}
       <div className="explorer-container">
         <div className="file-tree">
